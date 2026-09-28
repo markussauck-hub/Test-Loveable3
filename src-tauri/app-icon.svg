@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fa596"/>
+      <stop offset="0.55" stop-color="#5f7a69"/>
+      <stop offset="1" stop-color="#435a4c"/>
+    </linearGradient>
+    <radialGradient id="bezel" cx="0.42" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#9a9a90"/>
+      <stop offset="0.6" stop-color="#3b3b35"/>
+      <stop offset="1" stop-color="#191916"/>
+    </radialGradient>
+    <radialGradient id="cap" cx="0.36" cy="0.28" r="0.75">
+      <stop offset="0" stop-color="#e46a55"/>
+      <stop offset="0.55" stop-color="#a3251b"/>
+      <stop offset="1" stop-color="#4a0f0a"/>
+    </radialGradient>
+    <radialGradient id="lamp" cx="0.38" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#fff1b8"/>
+      <stop offset="0.45" stop-color="#f2a531"/>
+      <stop offset="1" stop-color="#7a3d05"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb640" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffb640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="screw" cx="0.38" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#e2e2d8"/>
+      <stop offset="0.5" stop-color="#77806f"/>
+      <stop offset="1" stop-color="#2a2d26"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Stahlplatte -->
+  <rect x="32" y="32" width="960" height="960" rx="120" fill="url(#plate)" stroke="#1f2b23" stroke-width="20"/>
+  <rect x="72" y="72" width="880" height="880" rx="90" fill="none" stroke="#b7c7b9" stroke-opacity="0.35" stroke-width="8"/>
+
+  <!-- Schrauben -->
+  <g>
+    <circle cx="150" cy="150" r="34" fill="url(#screw)"/><rect x="124" y="146" width="52" height="8" fill="#23261f" transform="rotate(-20 150 150)"/>
+    <circle cx="874" cy="150" r="34" fill="url(#screw)"/><rect x="848" y="146" width="52" height="8" fill="#23261f" transform="rotate(25 874 150)"/>
+    <circle cx="150" cy="874" r="34" fill="url(#screw)"/><rect x="124" y="870" width="52" height="8" fill="#23261f" transform="rotate(40 150 874)"/>
+    <circle cx="874" cy="874" r="34" fill="url(#screw)"/><rect x="848" y="870" width="52" height="8" fill="#23261f" transform="rotate(-35 874 874)"/>
+  </g>
+
+  <!-- Signallampe -->
+  <circle cx="512" cy="215" r="120" fill="url(#glow)"/>
+  <circle cx="512" cy="215" r="62" fill="#2b2a25"/>
+  <circle cx="512" cy="215" r="44" fill="url(#lamp)"/>
+
+  <!-- Drucktaste -->
+  <circle cx="512" cy="590" r="290" fill="#15150f" opacity="0.45" transform="translate(0 22)"/>
+  <circle cx="512" cy="590" r="290" fill="url(#bezel)"/>
+  <circle cx="512" cy="590" r="222" fill="#1b1a16"/>
+  <circle cx="512" cy="590" r="206" fill="url(#cap)"/>
+  <ellipse cx="450" cy="510" rx="95" ry="55" fill="#ffffff" opacity="0.22" transform="rotate(-25 450 510)"/>
+</svg>
