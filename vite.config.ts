@@ -4,7 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
 // Tauri erwartet einen festen Port im Dev-Modus und statische Dateien in ./dist.
+// GitHub Pages braucht den Repo-Unterpfad als Basis (gesetzt nur im Pages-Workflow).
+// Tauri- und lokale Builds bleiben bei "/".
+const base = process.env["GITHUB_PAGES_BASE"] ?? "/";
+
 export default defineConfig({
+  base,
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
